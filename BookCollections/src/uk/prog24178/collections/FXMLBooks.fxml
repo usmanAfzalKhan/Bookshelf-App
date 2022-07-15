@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<VBox fx:id="VBox" prefHeight="400.0" prefWidth="1200.0" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="uk.prog24178.collections.FXMLBooksController">
+    <fx:define>
+        <ToggleGroup fx:id="grpWindowChoice"/>
+    </fx:define>
+    <children>
+         <BorderPane>  
+            <left><RadioButton fx:id="albert" text="Albert" toggleGroup="$grpWindowChoice" /></left>
+            <center><RadioButton fx:id="balthasar" text="Balthasar" toggleGroup="$grpWindowChoice" /></center>
+            <right><RadioButton fx:id="cassidy" text="Cassidy" toggleGroup="$grpWindowChoice" /></right>
+        </BorderPane>  
+        <Label text="Book Title: " />
+        <TextField fx:id= "bkTitle" promptText="Book Title Goes Here"/> 
+        <CheckBox fx:id="incDesc" text="Include Description"/>    
+        <TextField fx:id="bkDesc" promptText="Book Description Goes Here"/> 
+        <HBox> 
+        <Button fx:id="saveBook" text="SAVE BOOK" onAction="#saveBook"/>        
+        <Button fx:id="sort" text="Sort" onAction = "#sort"/>
+        </HBox>
+        <Label fx:id= "sorted"/>
+        <HBox>
+        <Button fx:id="clear" text="Clear" onAction="#clear"/> 
+        </HBox>
+        <BorderPane>     
+            <left><TextArea prefWidth="250" prefHeight="250" editable="false" fx:id="albertBookOutput" wrapText="true" /></left>
+            <center><TextArea prefWidth="250" prefHeight="250" editable="false" fx:id="balthasarBookOutput" wrapText="true" /></center>
+            <right><TextArea prefWidth="250" prefHeight="250" editable="false" fx:id="cassidyBookOutput" wrapText="true" /></right>
+        </BorderPane>
+                <BorderPane>     
+            <left><Label text="Albert"/></left>
+            <center><Label text="Balthasar" /></center>
+            <right><Label text = "Cassidy" /></right>
+        </BorderPane>
+        <Button fx:id="print" text="PRINT ALL" onAction= "#printAll"/>
+        <TextArea prefWidth="450" prefHeight="150" editable="false" fx:id="allBooks" wrapText="true" />
+        <Label text="All Books"/>
+        <HBox>
+        <Button fx:id="quit" text="QUIT" onAction= "#quit"/>
+        </HBox>
+    </children>
+     
+       
+            
+      
+
+</VBox>

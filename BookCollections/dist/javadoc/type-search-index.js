@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"uk.prog24178.collections","l":"BookCollections"},{"p":"uk.prog24178.collections","l":"FXMLBooksController"}];updateSearchResults();
